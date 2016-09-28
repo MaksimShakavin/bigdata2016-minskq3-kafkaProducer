@@ -32,7 +32,7 @@ public class Producer {
                     System.out.println("reading lines of: " + filePath.toString());
                     try(Stream<String> lines = Files.lines(filePath, Charset.forName("ISO-8859-1"))) {
                         lines.forEach(line ->
-                                producer.send(new ProducerRecord<>("test2", line)));
+                                producer.send(new ProducerRecord<>("test3", line)));
                     } catch (IOException ex) {
                         throw new RuntimeException(ex);
                     }
